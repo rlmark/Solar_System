@@ -10,7 +10,6 @@ class Planet
     @inhabitable = planet_hash[:inhabitable]
     @rate_of_rotation = planet_hash[:rate_of_rotation]
   end
-
 end
 
 
@@ -29,7 +28,6 @@ class SolarSystem
       planet_year = @formation_date * 365 / planet.rate_of_rotation
       puts "your planet is #{planet_year} years old."
     end
-
   end
 end
 
@@ -109,7 +107,7 @@ desired_aspect = gets.chomp.downcase
 # Creates an array from instance variables
 planetary_array = queried_planet.instance_variables
 
-desired_aspect = ("@#{desired_aspect}")
+desired_aspect = "@#{desired_aspect}"
 
 if planetary_array.include? (desired_aspect.to_sym)
   puts "You selected " +  desired_aspect.gsub("@","")
